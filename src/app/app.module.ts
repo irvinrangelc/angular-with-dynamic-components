@@ -4,9 +4,12 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+import { DynamicOutletComponent } from './dynamic-component-loader/dynamic-outlet/dynamic-outlet.component';
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DynamicOutletComponent
   ],
   imports: [
     BrowserModule,
