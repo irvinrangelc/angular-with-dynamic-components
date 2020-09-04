@@ -2,11 +2,11 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   template: `
-    <p>lazy1 component</p>
+    <p>lazy2 component</p>
     <p>@Input: {{ data }}</p>
   `
 })
-export class Lazy1Component {
+export class Lazy2Component {
   @Input() data: any;
   @Output() saveData = new EventEmitter();
 }

@@ -1,13 +1,4 @@
-import { InjectionToken } from '@angular/core';
-
-export const DYNAMIC_COMPONENT = new InjectionToken<any>('DYNAMIC_COMPONENT');
-
-export const DYNAMIC_MODULE = new InjectionToken<any>('DYNAMIC_MODULE');
-
-export const DYNAMIC_COMPONENT_MANIFESTS = new InjectionToken<any>('DYNAMIC_COMPONENT_MANIFESTS');
-
 export interface DynamicComponentManifest {
-
   /** Unique identifier, used in the application to retrieve the Component from the Manifest. */
   componentId: string;
 

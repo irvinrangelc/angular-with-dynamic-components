@@ -1,4 +1,4 @@
-import { Injectable, Injector } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { Observable, of, throwError } from 'rxjs';
 
 import {
@@ -16,9 +16,7 @@ export const manifestArray: DynamicComponentManifest[] = [
 })
 export class DynamicComponentLoader {
 
-  constructor(
-    private injector: Injector
-  ) {
+  constructor() {
   }
 
   /** Retrieve a ComponentFactory, based on the specified componentId (defined in the DynamicComponentManifest array). */
@@ -34,7 +32,7 @@ export class DynamicComponentLoader {
       manifest = manifestArray.find(m => m.componentId === globalComponentId);
       if (!manifest) {
         // tslint:disable-next-line:max-line-length
-        return throwError(`DynamicComponentLoader: Unknown componentId, we tried with "${componentId}" and "${globalComponentId}", please check the components manifest on your app.module.`);
+        return throwError(`DynamicComponentLoader: Unknown componentId, we tried with "${componentId}" and "${globalComponentId}", please check the components manifest.`);
       }
     }
 

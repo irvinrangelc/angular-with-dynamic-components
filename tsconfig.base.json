@@ -20,7 +20,10 @@
     ]
   },
   "angularCompilerOptions": {
+    "skipTemplateCodegen": true,
+    "enableResourceInlining": true,
     "fullTemplateTypeCheck": true,
+    "enableIvy": true,
     "strictInjectionParameters": true
   }
 }

@@ -2,18 +2,20 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import { CommonComponentsModule } from './modules/shared/common-components.module';
 
-import { DynamicOutletComponent } from './dynamic-component-loader/dynamic-outlet/dynamic-outlet.component';
+import { AppComponent } from './app.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    DynamicOutletComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    CommonComponentsModule,
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
