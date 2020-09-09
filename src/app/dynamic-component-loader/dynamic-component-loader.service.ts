@@ -1,10 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable, of, throwError } from 'rxjs';
-
-import {
-  DynamicComponentManifest
-} from './dynamic-component-manifest';
-
+import { DynamicComponentManifest } from './dynamic-component-manifest';
 import { italyManifest } from './../modules/countries/italy/italy-manifest';
 
 export const manifestArray: DynamicComponentManifest[] = [

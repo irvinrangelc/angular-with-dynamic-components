@@ -1,7 +1,9 @@
 // tslint:disable-next-line:max-line-length
-import { Component, OnInit, Input, ViewChild, ViewContainerRef, Output, EventEmitter, OnChanges, SimpleChanges, OnDestroy, ComponentFactoryResolver, Injector } from '@angular/core';
+import { Component, OnInit, Input, ViewChild, ViewContainerRef, Output, EventEmitter, OnChanges, SimpleChanges, OnDestroy, ComponentFactoryResolver, Injector, ComponentRef } from '@angular/core';
 import { DynamicComponentLoader } from '../dynamic-component-loader.service';
 import { DynamicComponentManifest } from '../dynamic-component-manifest';
+import { Subject } from 'rxjs';
+import { takeUntil } from 'rxjs/operators';
 
 @Component({
   selector: 'app-dynamic-outlet',
@@ -17,8 +19,8 @@ export class DynamicOutletComponent implements OnInit, OnChanges, OnDestroy {
   @Output() saveData = new EventEmitter();
 
   // Dynamic Component Reference
-  componentRef: any;
-  dynamicComponentLoader$: any;
+  componentRef: ComponentRef<any>;
+  destroy$: Subject<boolean> = new Subject<boolean>();
 
   constructor(
     private dynamicComponentLoader: DynamicComponentLoader,
@@ -44,17 +46,13 @@ export class DynamicOutletComponent implements OnInit, OnChanges, OnDestroy {
     if (this.componentRef) {
       this.componentRef.destroy();
     }
-    if (this.dynamicComponentLoader$) {
-      this.dynamicComponentLoader$.unsubscribe();
-    }
+    this.destroy$.unsubscribe();
   }
 
   loadDynamicComponent(component: string): void {
-    if (this.dynamicComponentLoader$) {
-      this.dynamicComponentLoader$.unsubscribe();
-    }
-    this.dynamicComponentLoader$ = this.dynamicComponentLoader
+    this.dynamicComponentLoader
       .getComponentPath(component)
+      .pipe(takeUntil(this.destroy$))
       .subscribe(componentManifest => this.lazyComponent(componentManifest), error => console.warn(error));
   }
 
@@ -70,9 +68,7 @@ export class DynamicOutletComponent implements OnInit, OnChanges, OnDestroy {
 
       // We need to manually subscribe to outputs/events
       if (this.componentRef.instance.saveData) {
-        this.componentRef.instance.saveData.subscribe(data => {
-          this.saveData.emit(data);
-        });
+        this.componentRef.instance.saveData.subscribe((data: any) => this.saveData.emit(data));
       }
 
       // we need to manually trigger change detection on our in-memory component

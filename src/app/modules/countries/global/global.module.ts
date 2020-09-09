@@ -6,7 +6,8 @@ import { CommonComponentsModule } from '../../shared/common-components.module';
 
 @NgModule({
   declarations: [
-    Lazy1Component
+    Lazy1Component,
+    Lazy2Component
   ],
   imports: [
     CommonComponentsModule
