@@ -19,5 +19,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 Inspired by these amazing resources. If you want to learn more, check out these articles and examples.
 1. [Dynamic Component Loader](https://angular.io/guide/dynamic-component-loader)
 1. [7 new features in Angular 9](https://auth0.com/blog/angular-9-whats-new/)
+1. [Angular 9: Lazy Loading Components](https://johnpapa.net/angular-9-lazy-loading-components/)
 1. [Angular Lazy Load Demo source code](https://github.com/johnpapa/angular-lazy-load-demo)
-
+1. [Manually Lazy Load Modules And Components In Angular](https://www.mokkapps.de/blog/manually-lazy-load-modules-and-components-in-angular/)
+1. [Lazy load Angular components](https://medium.com/angular-in-depth/lazy-load-components-in-angular-596357ab05d8)
