@@ -1,31 +1,26 @@
 # Angular with Dynamic Components
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.8.
+Dynamic Components (Lazy loaded) implementing a component outlet.
 
-## Development server
+## Quick Start
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Angular 10 is required.
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1.  Clone this repo `https://github.com/irvinrangelc/angular-with-dynamic-components`
+1.  Run `cd angular-with-dynamic-components`
+1.  Run `ng serve` for a dev server.
+1.  Navigate to `http://localhost:4200/`.
 
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## Running unit tests
+## Learn more
+Inspired by these amazing resources. If you want to learn more, check out these articles and examples.
+1. [Dynamic Component Loader](https://angular.io/guide/dynamic-component-loader)
+1. [7 new features in Angular 9](https://auth0.com/blog/angular-9-whats-new/).
+1. [VS Code](https://code.visualstudio.com/?wt.mc_id=angular_lazy_load_demo-github-jopapa) editor
+1. [Angular Essentials Extension](https://marketplace.visualstudio.com/items?itemName=johnpapa.angular-essentials&wt.mc_id=angular_lazy_load_demo-github-jopapa) for VS Code
+1. [Angular Language Service](https://marketplace.visualstudio.com/items?itemName=Angular.ng-template&wt.mc_id=angular_lazy_load_demo-github-jopapa) for VS Code
+1. [Angular Lazy Load Demo source code](https://github.com/johnpapa/angular-lazy-load-demo)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
-
-## Resources
-https://dev.to/angular/angular-9-lazy-loading-components-o04
-https://github.com/johnpapa/angular-lazy-load-demo
