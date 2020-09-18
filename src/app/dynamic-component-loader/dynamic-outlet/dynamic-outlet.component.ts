@@ -57,7 +57,9 @@ export class DynamicOutletComponent implements OnInit, OnChanges, OnDestroy {
   }
 
   private lazyComponent(componentManifest: DynamicComponentManifest): void {
-    import(`./../../${componentManifest.loadComponent}`).then((lazyComponent) => {
+    import(
+      /* webpackInclude: /\.component.js$/ */
+      `./../../modules/countries/${componentManifest.loadComponent}`).then((lazyComponent) => {
       const componentFactory = this.cfr.resolveComponentFactory(lazyComponent[componentManifest.componentName]);
 
       this.componentOutlet.clear();

@@ -1,6 +1,6 @@
 # Angular with Dynamic Components
 
-Dynamic Components (Lazy loaded) implementing a component outlet.
+Dynamic Components in Angular (Lazy loaded) implementing a component outlet. Do you want to dynamically load components using a region-based or maybe a feature-based approach?
 
 ## Quick Start
 
@@ -18,6 +18,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 ## Learn more
 Inspired by these amazing resources. If you want to learn more, check out these articles and examples.
 1. [Dynamic Component Loader](https://angular.io/guide/dynamic-component-loader)
+1. [Module Methods available in code compiled with Webpack](https://webpack.js.org/api/module-methods/)
 1. [7 new features in Angular 9](https://auth0.com/blog/angular-9-whats-new/)
 1. [Angular 9: Lazy Loading Components](https://johnpapa.net/angular-9-lazy-loading-components/)
 1. [Angular Lazy Load Demo source code](https://github.com/johnpapa/angular-lazy-load-demo)
